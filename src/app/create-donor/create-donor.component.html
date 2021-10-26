@@ -1,0 +1,79 @@
+<div class="col-md-8 offset-md-3">
+    <h3>Create Donor</h3>
+        <div class="container">
+           <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Donor Name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="donorName"
+                                    [(ngModel)]="donor.donorName" name="donorName">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>User Name </label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="userName"
+                                    [(ngModel)]="donor.userName" name="userName">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Password </label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="password"
+                                    [(ngModel)]="donor.password" name="password">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6"></div>
+                                    <label>Address </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="address"
+                                        [(ngModel)]="donor.address" name="address">
+                                </div>
+                            </div>
+                        
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Phone Number</label>
+                            </div>     
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="phoneNumber"
+                                        [(ngModel)]="donor.phoneNumber" name="phoneNumber">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Established Date</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="establishedDate"
+                                    [(ngModel)]="donor.establishedDate" name="establishedDate">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn btn-success" type="submit">Submit</button>
+          </form>
+</div>

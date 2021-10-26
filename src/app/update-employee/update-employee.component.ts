@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Employee } from '../employee';
-import { EmployeeService } from '../employee.service';
+import { Donation } from '../donation';
+import { DonorService } from '../donor.service';
 
 @Component({
   selector: 'app-update-employee',
@@ -11,21 +11,21 @@ import { EmployeeService } from '../employee.service';
 export class UpdateEmployeeComponent implements OnInit {
 
   id: number;
-  employee: Employee = new Employee();
-  constructor(private employeeService: EmployeeService,
+  donation: Donation = new Donation();
+  constructor(private donorService: DonorService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
 
-    this.employeeService.getEmployeeById(this.id).subscribe(data =>{
-       this.employee = data;
+    this.donorService.getEmployeeById(this.id).subscribe(data =>{
+       this.donation = data;
     }, error => console.log(error));
   }
 
   onSubmit(){
-    this.employeeService.updateEmployee(this.id, this.employee).subscribe(
+    this.donorService.updateEmployee(this.id, this.donation).subscribe(
       data => {
         this.goToEmployeeList();
       },
