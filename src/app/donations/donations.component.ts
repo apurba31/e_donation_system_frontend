@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Donation } from '../donation';
+import { DonationService } from '../donation.service';
 import { DonorService } from '../donor.service';
 
 @Component({
@@ -12,32 +13,20 @@ export class DonationsComponent implements OnInit {
 
   donations: Donation[]=[];
 
-  constructor(private donorService:DonorService,
+  constructor(private donationService:DonationService,
               private router:Router) { }
 
   ngOnInit(): void {
-    this.getEmployees();
+    this.getDonations();
   }
 
-  getEmployees(){
-    this.donorService.getEmployeesList().subscribe(
-      data=> {
-        this.donations =data;
-      });
+  getDonations(){
+    this.donationService.getDonationsList().subscribe(
+      data => {
+        console.log(data);
+        this.donations = data;
+      }
+    );
   }
 
-  updateEmployee(id: number){
-    this.router.navigate(['update-employee', id]);
-  }
-
-  employeeDetails(id: number){
-    this.router.navigate(['employee-details', id]);
-  }
-
-  deleteEmployee(id: number){
-    this.donorService.deleteEmployee(id).subscribe( data => {
-      console.log(data);
-      this.getEmployees();
-    })
-  }
 }

@@ -12,29 +12,38 @@ import { DonorService } from '../donor.service';
 export class CreateDonorComponent implements OnInit {
 
   donation: Donation = new Donation();
-  donor: Donor = new Donor();
+  donors: Donor = new Donor();
+  donor:Donor = new Donor();
+  donorNames: {}|any;
   constructor(private donorService:DonorService,
               private router:Router) { }
 
   ngOnInit(): void {
+    this.getDonorNameList();
   }
 
-  saveEmployee(){
-    this.donorService.createEmployee(this.donation).subscribe(
-      data => { 
+  saveDonor(){
+    this.donorService.createDonor(this.donor).subscribe(
+      data => {
         console.log(data);
-        this.goToEmployeeList();
+        //this.router.navigate(['/create-donor']);
       },
       error => console.log(error));
   }
 
-  goToEmployeeList(){
-    this.router.navigate(['/donations']);
+  onSubmit(){
+    console.log(this.donors);
+    // this.saveEmployee();
+    this.saveDonor();
+    this.router.navigate(['/create-donor']);
   }
 
-  onSubmit(){
-    console.log(this.donor);
-    // this.saveEmployee();
-    this.router.navigate(['/create-donor']);
+  getDonorNameList(){
+    this.donorService.getDonorNameList().subscribe(
+      data => {
+        console.log(data);
+        this.donorNames = data;
+      }
+    );
   }
 }
