@@ -10,7 +10,7 @@ import { Donor } from './donor';
 export class DonorService {
 
   private baseUrl = "http://localhost:8080/e-donation/api/v1";
-  private testUrl = "http://localhost:3000/create-donor";
+  private testUrl = "http://localhost:3000/donation";
 
   constructor(private http:HttpClient) { }
 

@@ -1,8 +1,8 @@
 export class Donor {
-    donorName: number;
-    userName: number;
-    password: number;
-    address: number;
+    donorName: string;
+    userName: string;
+    password: string;
+    address: string;
     phoneNumber: number;
     establishedDate: Date;
 }

@@ -1,0 +1,105 @@
+<div class="col-md-8 offset-md-3">
+    <h3>Fetch Donor Details</h3>
+        <div class="container">
+           <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label>Donor Name</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select type="text" class="form-control" id="donorName"
+                                                [(ngModel)]="donationSelected" name="donorName" (ngModelChange)="onDonorSelected($event)" >
+                                                <option *ngFor="let donation of donations;" [value]="donation.donorId">
+                                                    {{donation.donorName}}
+                                                </option>
+                                            </select>
+                                            <br>
+                                            <button class="btn btn-success" type="submit">Submit</button>
+                                        </div>
+                                        
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>User Name </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" id="username" [value]="donation.username"> 
+                                    </div>
+                                </div>
+                            </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Password </label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="password" [value]="donation.password">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Address</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="address" [value]="donation.address">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Phone Number</label>
+                                </div>     
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="phoneNumber" [value]="donation.phoneNumber">
+                                </div>
+                            </div>
+                        </div>
+                         <br>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Established Date</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="establishedDate" [value]="donation.establishedDate">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+              
+          </form>
+    </div>
+</div>
+<form (ngSubmit)="onSubmit()">
+    <h2> Donations </h2>
+    <div class="container">
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th> DonorId</th>
+                    <th> NgoId </th>
+                    <th> Donation Type </th>
+                    <th> Amount </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let donation of donations" >
+                    <td> {{ donation.donorId }} </td>
+                    <td> {{ donation.ngoId }} </td>
+                    <td> {{ donation.donationType }} </td>
+                    <td> {{ donation.amount }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>

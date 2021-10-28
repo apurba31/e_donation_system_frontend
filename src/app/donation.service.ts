@@ -16,5 +16,11 @@ export class DonationService {
   //get donations list
   getDonationsList(): Observable<Donation[]>{
     return this.http.get<Donation[]>(`${this.testUrl}`);
+    //   return this.http.get<Donation>(`${this.baseUrl}/${id}`);
   }
+
+  // get donation by id
+  getDonationById(id: number): Observable<Donation>{
+    return this.http.get<Donation>(`${this.testUrl}/${id}`);
+  } 
 }

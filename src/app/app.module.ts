@@ -4,18 +4,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DonationsComponent } from './donations/donations.component';
-import { CreateDonorComponent } from './create-donor/create-donor.component';
+import { FetchDonorDetailsComponent } from './fetch-donor-details/fetch-donor-details.component';
 import { FormsModule } from '@angular/forms';
-// import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
-// import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DonationsComponent,
-    CreateDonorComponent
-    // UpdateEmployeeComponent,
-    // EmployeeDetailsComponent
+    FetchDonorDetailsComponent
   ],
   imports: [
     BrowserModule,
