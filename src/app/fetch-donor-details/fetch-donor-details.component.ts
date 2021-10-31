@@ -28,7 +28,6 @@ export class FetchDonorDetailsComponent implements OnInit {
   onSubmit(){
     console.log(this.donations);
     this.getDonations();
-    // this.getDonationsById(this.id);
   }
 
   onDonorSelected(value:any){
