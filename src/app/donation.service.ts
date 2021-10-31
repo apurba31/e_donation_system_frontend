@@ -10,6 +10,7 @@ export class DonationService {
 
   // private baseUrl = "http://localhost:8080/e-donation/api/v1";
   private testUrl = "http://localhost:3000/donation";
+  private newUrl = "localhost:8080/donations/by-id";
 
   constructor(private http:HttpClient) { }
 

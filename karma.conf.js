@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/Angular-Mysql-FrontEnd'),
+      dir: require('path').join(__dirname, './coverage/E Donation System'),
       subdir: '.',
       reporters: [
         { type: 'html' },

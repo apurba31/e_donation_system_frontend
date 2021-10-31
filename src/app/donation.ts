@@ -3,10 +3,10 @@ export class Donation {
     ngoId: number;
     donationType: string;
     amount: number;
-    donorName: string;
+    name: string;
     username: string;
     password: string;
     address: string;
-    phoneNumber: number;
+    number: number;
     establishedDate: Date; 
 }

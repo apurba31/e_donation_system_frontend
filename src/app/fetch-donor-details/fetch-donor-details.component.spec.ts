@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CreateDonorComponent } from './fetch-donor-details.component';
+import { FetchDonorDetailsComponent } from './fetch-donor-details.component';
 
 describe('CreateEmployeeComponent', () => {
-  let component: CreateDonorComponent;
-  let fixture: ComponentFixture<CreateDonorComponent>;
+  let component: FetchDonorDetailsComponent;
+  let fixture: ComponentFixture<FetchDonorDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateDonorComponent ]
+      declarations: [ FetchDonorDetailsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateDonorComponent);
+    fixture = TestBed.createComponent(FetchDonorDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

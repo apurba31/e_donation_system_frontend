@@ -16,6 +16,7 @@ export class FetchDonorDetailsComponent implements OnInit {
   donations: Donation[]=[];
   donation: Donation = new Donation();
   donationSelected: number = 0;
+  id:number;
   constructor(private donorService:DonorService,
           private donationService:DonationService,
               private router:Router) { }
@@ -27,6 +28,7 @@ export class FetchDonorDetailsComponent implements OnInit {
   onSubmit(){
     console.log(this.donations);
     this.getDonations();
+    // this.getDonationsById(this.id);
   }
 
   onDonorSelected(value:any){

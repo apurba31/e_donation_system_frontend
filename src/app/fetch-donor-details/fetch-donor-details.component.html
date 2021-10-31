@@ -11,7 +11,7 @@
                                             <select type="text" class="form-control" id="donorName"
                                                 [(ngModel)]="donationSelected" name="donorName" (ngModelChange)="onDonorSelected($event)" >
                                                 <option *ngFor="let donation of donations;" [value]="donation.donorId">
-                                                    {{donation.donorName}}
+                                                    {{donation.name}}
                                                 </option>
                                             </select>
                                             <br>
@@ -60,7 +60,7 @@
                                     <label>Phone Number</label>
                                 </div>     
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" id="phoneNumber" [value]="donation.phoneNumber">
+                                    <input type="text" class="form-control" id="phoneNumber" [value]="donation.number">
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
           </form>
     </div>
 </div>
-<form (ngSubmit)="onSubmit()">
+<form>
     <h2> Donations </h2>
     <div class="container">
         <table class = "table table-striped">
