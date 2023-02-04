@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { BikeService } from 'src/app/services/bike.service';
 
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     'Globo Carbon Fiber Race Series',
     'Globo Time Trial Blade',
   ];
-  bikeform: FormGroup | undefined;
+  bikeform?: FormGroup;
   validMessage: string = "";
 
   constructor(private bikeService: BikeService) { }

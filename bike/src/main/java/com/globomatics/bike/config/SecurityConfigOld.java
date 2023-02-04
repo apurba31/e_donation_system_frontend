@@ -12,7 +12,7 @@ import org.springframework.http.HttpMethod;
 
 //@EnableWebSecurity
 @Configuration
-public class SecurityConfig //extends WebSecurityConfigurerAdapter
+public class SecurityConfigOld
 {
 //	@Value(value = "$(auth0.apiAudience)")
 //	private String apiAudience;
